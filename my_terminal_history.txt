@@ -1,0 +1,118 @@
+    1  sudo apt update && sudo apt upgrade -y
+    2  sudo apt install -y gcc g++ python3 python3-pip cmake git build-essential libsqlite3-dev libboost-all-dev \libgsl-dev libpcap-dev libpng-dev libx11-dev \libxmu-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+    3  cd ~
+    4  git clone https://gitlab.com/nsnam/ns-3-dev.git
+    5  cd ns-3-dev
+    6  ./ns3 configure --enable-examples --enable-tests
+    7  ./ns3 build
+    8  cd scratch
+    9  nano aodv-manet.cc
+   10  cd ~/ns-3-dev
+   11  ./ns3 configure
+   12  ./ns3 build
+   13  ./ns3 run scratch/aodv-manet
+   14  tcpdump -r aodv-manet.pcap
+   15  sudo snap install tcpdump  # version 4.9.3-4ubuntu0.2+snap1
+   16  tcpdump -r aodv-manet.pcap
+   17  wifiPhy.EnablePcap("aodv-manet", devices);
+   18  cd ~/ns-3-dev/scratch
+   19  nano aodv-manet.cc
+   20  cd ~/ns-3-dev
+   21  ./ns3 configure
+   22  ./ns3 build
+   23  ./ns3 run scratch/aodv-manet
+   24  cd ~/ns-3-dev/scratch
+   25  nano aodv-manet.cc
+   26  cd ~/ns-3-dev
+   27  ./ns3 clean
+   28  ./ns3 configure
+   29  ./ns3 run scratch/aodv-manet
+   30  git init
+   31  git add .
+   32  git commit -m "Fixed mobility model in aodv-manet.cc"
+   33  git config --global user.name "Prerna Nand"
+   34  git config --global user.email "prerna@example.com"
+   35  git config --global --list
+   36  git commit -m "Fixed mobility model in aodv-manet.cc"
+   37  git config user.name "Your Name"
+   38  git config user.name "Prerna Nand"
+   39  git config user.email "nandprerna.0312@gmail.com"
+   40  git commit -m "Fixed mobility model in aodv-manet.cc"
+   41  sudo apt update
+   42  sudo apt install tcpdump -y
+   43  cd ~/ns-3-dev
+   44  ls *.pcap
+   45  aodv-manet-0-0.pcap
+   46  tcpdump -r aodv-manet-0-0.pcap
+   47  tcpdump -r aodv-manet-0-0.pcap | grep AODV
+   48  sudo tcpdump -r aodv-manet-0-0.pcap
+   49  sudo tcpdump -r aodv-manet-0-0.pcap | grep "aodv"
+   50  cat ~/.bash_history | grep ns3
+   51  cd ~/ns-3-dev
+   52  ./ns3 run scratch/aodv-manet
+   53  sudo tcpdump -r aodv-manet-0-0.pcap
+   54  sudo tcpdump -r aodv-manet-0-0.pcap | grep "aodv"
+   55  ./ns3 run scratch/aodv-manet | tee ns3_output.log
+   56  sudo apt update && sudo apt upgrade -y
+   57  cd ns-3-dev
+   58  ./ns3 configure
+   59  ./ns3 build
+   60  cd ~/ns-3-dev/scratch
+   61  nano edca-mac.cc
+   62  cd ~/ns-3-dev
+   63  ./ns3 configure
+   64  ./ns3 build
+   65  ./ns3 run scratch/edca-mac
+   66  nano edca-mac.cc
+   67  cd ~/ns-3-dev/scratch
+   68  nano edca-mac.cc
+   69  cd ~/ns-3-dev
+   70  ./ns3 configure
+   71  ./ns3 build
+   72  ./ns3 run scratch/edca-mac
+   73  ./ns3 configure
+   74  ./ns3 configure --enable-modules=wifi
+   75  ./ns3 build
+   76  grep -r "EdcaWifiMac" src/
+   77  cd ~/ns-3-dev/scratch
+   78  nano edca-mac.cc
+   79  ./ns3 build
+   80  cd ~/ns-3-dev
+   81  ./ns3 build
+   82  cd ~/ns-3-dev
+   83  rm -rf build
+   84  ./ns3 configure --enable-modules=wifi
+   85  ./ns3 build
+   86  ./ns3 run scratch/edca-mac
+   87  ./ns3 configure --enable-modules=internet,wifi
+   88  ./ns3 build
+   89  ./ns3 run scratch/edca-mac
+   90  tcpdump -r edca-mac.pcap
+   91  tcpdump -nn -tt -r edca-mac.pcap
+   92  cd ~/ns-3-dev
+   93  nano scratch/edca-mac.cc
+   94  ./ns3 build
+   95  ./ns3 run scratch/edca/edca-mac
+   96  ls ~/ns-3-dev/scratch
+   97  ./ns3 configure
+   98  ./ns3 build
+   99  ./ns3 clean
+  100  ./ns3 build
+  101  ./ns3 configure
+  102  ./ns3 run scratch/edca-mac
+  103  grep -r "EdcaWifiMac" ~/ns-3-dev/src/wifi/model
+  104  cd ~/ns-3-dev/scratch
+  105  nano edca-mac.cc
+  106  cd ~/ns-3-dev
+  107  ./ns3 clean
+  108  ./ns3 build
+  109  ./ns3 configure
+  110  ./ns3 build
+  111  ./ns3 run scratch/edca-mac
+  112  nano ~/ns-3-dev/scratch/edca-mac.cc
+  113  ./ns3 configure --enable-modules=wifi
+  114  ./ns3 clean
+  115  ./ns3 build
+  116  ./ns3 configure
+  117  ./ns3 build
+  118  history > my_terminal_history.txt

@@ -1,12 +1,134 @@
-# The Network Simulator, Version 3
+# AODV & PCF MAC Implementation in NS-3
 
-[![codecov](https://codecov.io/gh/nsnam/ns-3-dev-git/branch/master/graph/badge.svg)](https://codecov.io/gh/nsnam/ns-3-dev-git/branch/master/)
-[![Gitlab CI](https://gitlab.com/nsnam/ns-3-dev/badges/master/pipeline.svg)](https://gitlab.com/nsnam/ns-3-dev/-/pipelines)
-[![Github CI](https://github.com/nsnam/ns-3-dev-git/actions/workflows/per_commit.yml/badge.svg)](https://github.com/nsnam/ns-3-dev-git/actions)
+## 📌 Installation Steps
+1. Install NS-3 dependencies:
+   ```sh
+   sudo apt update && sudo apt install g++ python3 cmake ninja-build
+2. Clone ns-3 
+    git clone https://gitlab.com/nsnam/ns-3-dev.git
+    cd ns-3-dev
+3. Configure and build NS-3
+               ./ns3 configure
+              ./ns3 build
 
-[![Latest Release](https://gitlab.com/nsnam/ns-3-dev/-/badges/release.svg)](https://gitlab.com/nsnam/ns-3-dev/-/releases)
+4. Copy AODV & PCF-MAC code to scratch/  :
+    cp aodv-manet.cc scratch/
+    cp pcf-mac.cc scratch/
+5. Run the simulation :-
+     ./ns3 run scratch/aodv-manet
+     ./ns3 run scratch/pcf-mac
+6. Analyze packet tracing :
 
-## License
+ a) for AODV 
+      
+
+    tcpdump -r aodv-manet-0-0.pcap
+    tcpdump -r aodv-manet-0-0.pcap | grep "aodv"
+ b) for PCF-MAC 
+
+tcpdump -n -tt -r pcf-mac-1-0.pcap
+     
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ License
 
 This software is licensed under the terms of the GNU General Public License v2.0 only (GPL-2.0-only).
 See the LICENSE file for more details.
